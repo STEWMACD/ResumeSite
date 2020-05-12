@@ -10,21 +10,24 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src`,
       },
     },
-    'gatsby-transformer-json',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: './src/contentData',
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
       resolve: 'gatsby-transformer-json',
       options: {
-        typeName: "Json"
+        typeName: ({node,object,isArray}) => object.label
       }
-    }
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-image'
   ],
 }

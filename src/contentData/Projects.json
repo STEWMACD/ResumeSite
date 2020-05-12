@@ -1,0 +1,60 @@
+[
+    {
+        "label": "Project",
+        "inspiration" : "Personal",
+        "title": "Robotic Arm",
+        "shortDescription": "Designed and built 5 degree of freedom robotic arm",
+        "longDescription": "I designed a small robotic arm using OnShape's online CAD Platform. The design is for a 3D printed solution uisng an Ender-3 framework. This project taught me about implementing stepper motors, control design, modelling and other aspects of electro-mechanical design. I also gained hands-on experience in assembly, soldering, rapid prototyping and electric motors. Note: Currently in manufacturing stage",
+        "date" : "May 2020",
+        "skills" : "Robotics, CAD, Electronics, Stepper Motors, Rapid Prototyping, Machine Design",
+        "images":
+        [
+            {"file":"../images/gatsby-icon.png","tag":"This is a gatsby source image"},
+            {"file":"../images/gatsby-astronaut.png","tag":"This is a gatsby source image deux"},
+            {"file":"../images/gatsby-astronaut.png","tag":"This is a gatsby source image deux"},
+            {"file":"../images/gatsby-astronaut.png","tag":"This is a gatsby source image deux"}
+            
+        ]
+    },
+    {
+        "label": "Project",
+        "inspiration" : "Personal",
+        "title": "Resume Website",
+        "shortDescription": "Designed and developed resume website. Created in Gatsby",
+        "longDescription": "Developed the design using BootStrap, Gatsbyjs on a Node backend. This project allowed me to showcase creative skills, programming skills and served as a learning experience. I had to develop an understanding of backend architecture, front end design and server architecture.",
+        "date" : "May 2020",
+        "skills": "Programming, design, web development, Javascript, HTML",
+        "images":
+        [
+            
+        ]
+    },
+    {
+        "label": "Project",
+        "inspiration" : "Academics",
+        "title": "3D Printed Axial Flux Motor",
+        "shortDescription": "Designed, maufactured and programmed a small axial flux motor",
+        "longDescription": "For an Electro-Mechanical Machines course, we had to build a small scale electric motor as a final project. Looking for something unique to earn our team extra points, we stumbled upon axial flux or pancake motors. Using inspiration from other smiliar motors we found online, we developed a 3 phase motor which was able to achieve 10,000 RPM, with 11W of power consumption. The motor speed was dictated using a potetiometer dial telling an arduino to pass a PWM signal to a Motor Speed Controller. Using off the shelf components, rather than building a motor controller allowed us to quickly get top teir results. The design also featured a hall-effect sensor creating an tachometer on an LCD screen.",
+        "date" : "May 2020",
+        "skills": "Programming, design, web development, Javascript, HTML",
+        "images":
+        [
+            {"file":"../images/ElecMotorRender.JPG","tag":"Rendering of SolidWorks 3D model"},
+            {"file":"../images/MotorFinal.jpg","tag":"Assembled motor"},
+            {"file":"../images/MotorVideoThumb.jpg","videoURL":"","tag":"Rendering of SolidWorks 3D model"}
+        ]
+    },
+    {
+        "label": "Project",
+        "inspiration" : "Personal",
+        "title": "3D Printer - Creality Ender 3 ",
+        "shortDescription": "Built and used Ender 3 model 3D printer",
+        "longDescription": "Bought Creality Ender 3 kit, which came as a semi-assembled kit. Once assembled, the printer was used extensively in other projects, some of which are listed here. In order to efficiently produce prints, certain upgrades had to be printed, sourced and programed for the machine. Many of the printed solutions were found online and provided a great resource to dial in the 3D printer slicer settings. Bought components were swapped out with stock compenentry, requiring assembly and disassembly. The main change to programming was introducing Thermal-Runaway protection via flashing new firmware onto the mainboard.",
+        "date" : "Jan 2020",
+        "skills": "Assembly, Machine design, 3D printing, electronics",
+        "images":
+        [
+           
+        ]
+    }
+]

@@ -1,0 +1,11 @@
+
+{
+    "label" : "WorkExperience",
+    "employer" : "Propell Oilfield Equipment",
+    "title": "Engineering Product Specialist",
+    "startDate": "June 2019",
+    "endDate" : "March 2020",
+    "description": "Worked as a mechanical engineer focusing on hydraulic fracturing machines, and implementing SolidWorks PDM for company use",
+    "keyPoints":
+    ["Used SolidWorks to create 3D models of designs, and create drawings","Designed basic hydraulic systems and created layout drawings","Develop calculation sheets for ASME B31.3 Process piping specifications","Simulated critical designs used Solidworks FEA analysis, prepared reports documenting findings"]
+}
