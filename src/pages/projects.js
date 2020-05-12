@@ -7,8 +7,6 @@ import Project from "../components/project"
 
 
 const projects = ({data}) => (
-  <>
-  {console.log(data)}
   <Layout>
     <SEO title="Projects" />
     <h1>Projects</h1>
@@ -17,14 +15,12 @@ const projects = ({data}) => (
     
     
   </Layout>
-  </>
 );
 
 
 function getProjects(data) {
   const projectsArray = [];
   data.allProject.edges.forEach(element => {
-    console.log(element)
     projectsArray.push(<Project project = {element}/>)
     projectsArray.push(<hr/>)
   });
@@ -56,6 +52,7 @@ query {
             }
           }
           tag
+          videoURL
         }
       }
     }

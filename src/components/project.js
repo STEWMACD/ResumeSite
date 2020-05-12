@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 import "../styles/projects.css"
-import { Collapse, Alert } from 'reactstrap'
+import { Collapse } from 'reactstrap'
 import ImageModal from "./imageModal.js"
-
-// TODO: Sort the projects by date - Investigate JSON Dates
+import moment from "moment"
 
 const Project = ({project}) =>{
     const [isOpen, setIsOpen] = useState(false);
@@ -11,11 +10,12 @@ const Project = ({project}) =>{
         setStatus(isOpen ? "more...":"less...");}
     const [status, setStatus] = useState('more...')
     
+    
     return(
 
     <div>
         <div className="title">{project.node.title}</div>
-        <div className="emphasis">{project.node.inspiration} | {project.node.date}</div>
+        <div className="emphasis">{project.node.inspiration} | {moment(project.node.date).format("MMMM YYYY")}</div>
         <div>{project.node.shortDescription}
         </div>
         <div>
@@ -23,9 +23,12 @@ const Project = ({project}) =>{
                 <div className="CollapseContainer bg-light border">
                     <div>
                         {project.node.longDescription}
+                        
+                    <ImageModal images={project.node.images}/>
                     </div>
             
-            <ImageModal images={project.node.images}/>
+                    <div>
+                    </div>
             </div>
             
             </Collapse>

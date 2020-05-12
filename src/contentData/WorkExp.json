@@ -1,4 +1,4 @@
-
+[
 {
     "label" : "WorkExperience",
     "employer" : "Propell Oilfield Equipment",
@@ -7,5 +7,53 @@
     "endDate" : "March 2020",
     "description": "Worked as a mechanical engineer focusing on hydraulic fracturing machines, and implementing SolidWorks PDM for company use",
     "keyPoints":
-    ["Used SolidWorks to create 3D models of designs, and create drawings","Designed basic hydraulic systems and created layout drawings","Develop calculation sheets for ASME B31.3 Process piping specifications","Simulated critical designs used Solidworks FEA analysis, prepared reports documenting findings"]
+    [
+        "Used SolidWorks to create 3D models of designs, and create drawings",
+        "Designed basic hydraulic systems and created layout drawings",
+        "Develop calculation sheets for ASME B31.3 Process piping specifications",
+        "Simulated critical designs used Solidworks FEA analysis, prepared reports documenting findings"]
+},
+{
+    "label" : "WorkExperience",
+    "employer" : "Propell Oilfield Equipment",
+    "title": "Engineering Summer Student",
+    "startDate": "May 2018",
+    "endDate" : "August 2018",
+    "description": "Worked as a mechanical engineer focusing on hydraulic fracturing machines, and implementing SolidWorks PDM for company use",
+    "keyPoints":
+    [
+        "Supported production teams in large output manufacturing and assembly processes",
+        "Implemented changes compliant with Engineering Change Request procedures",
+        "Determined root cause of issues via system and design analysis"
+    ]
+},
+{
+    "label" : "WorkExperience",
+    "employer" : "Village of Harrison Hot Springs",
+    "title": "Engineering and Utilities Summer Student",
+    "startDate": "June 2016",
+    "endDate" : "August 2016",
+    "description": "Worked for the village completing tasks primarily related to water usage and billing.",
+    "keyPoints":
+    [
+        "Compiled data on water usage, compliance and billing requirements",
+        "Prepared reports effectively communicating findings",
+        "Mapped village assets and performed analysis on asset lifetimes"
+    ]
+},
+{
+    "label" : "WorkExperience",
+    "employer" : "Fairfield Island Plumbing and Heating",
+    "title": "Plumbing Labourer (Summer Position)",
+    "startDate": "June 2013",
+    "endDate" : "June 2016",
+    "description": "Performed manual labour tasks to facilitate installation of plumbing products",
+    "keyPoints":
+    [
+        "Performed labour work as required to install plumbing hardware",
+        "Participated in construction of residential and commerical projects",
+        "Installed copper, ABS, PVC, Pex and cast-iron piping",
+        "Operated gas and electric powered tools"
+    ]
 }
+]

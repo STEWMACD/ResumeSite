@@ -21,7 +21,6 @@ const projects = ({data}) => (
 
 
 function getWorkExperience(data) {
-  console.log(data)
   const projectsArray = [];
   data.allWorkExperience.edges.forEach(element => {
    

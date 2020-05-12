@@ -28,7 +28,6 @@ export default WorkExperience
 
 function listPoints(points) {
     const returnArray = [];
-    console.log(points)
     points.forEach(element => {
         
       returnArray.push(<li>{element}</li>)

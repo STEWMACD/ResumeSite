@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import {Modal, Container,Row,Col, ModalBody, ModalHeader} from "reactstrap"
 import Img from "gatsby-image"
 import "../styles/images.css"
+import Video from "../components/video"
 
 const ImageModal = ({images}) =>{
 
@@ -9,14 +10,21 @@ const ImageModal = ({images}) =>{
 
     const toggle = () => setModal(!modal);
 
-    return(
-        <Container>
-                <Row xs="4">
-                    {getImages(images)}
-                </Row>    
-        </Container>
-        
-    );
+    //Only return images if there is atleast one image
+    if (images.length > 0){
+        return(
+            <>
+            <hr/>
+            <Container>
+                    <Row xs="4">
+                        {getImages(images)}
+                    </Row>    
+            </Container>
+            </>
+        );
+    }
+    return (<></>);
+    
 }
 export default ImageModal
 
@@ -39,8 +47,9 @@ function getImages(images) {
             
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalBody>
-                    <div className="float-center">
-                        <Img fluid={image.file.childImageSharp.fluid} alt={image.tag}/>
+                    <div className="text-center">
+                        {getModalContent(image)}
+                        
                     </div>
                 </ModalBody>
             </Modal>
@@ -48,3 +57,15 @@ function getImages(images) {
         </>
 
   );}
+
+function getModalContent(image){
+    const returnArray = [];
+    if(image.videoURL != null){
+        returnArray.push(<Video videoSrcURL = {image.videoURL}/>) 
+    }else{
+        returnArray.push(<Img fluid={image.file.childImageSharp.fluid} alt={image.tag}/>)
+
+    }
+    return returnArray;
+
+}

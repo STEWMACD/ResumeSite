@@ -35,10 +35,11 @@ const Header = ({ siteTitle }) => {
               <NavLink href="/">About</NavLink>
             </NavItem>
           </Nav>
-        </Collapse>
-        <NavbarText>
+          <NavbarText>
            604-798-5441 | stewart.d.macdonald@gmail.com
           </NavbarText>
+        </Collapse>
+        
       </Navbar>
     </div>
     
