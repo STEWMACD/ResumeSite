@@ -9,7 +9,7 @@ const About = ({})=>{
     return(
       <Container>
             <Row>
-                <Col xs="auto">
+                <Col md="4" className="name">
                     <StaticQuery
                     query= {graphql`
                     query{
@@ -17,17 +17,20 @@ const About = ({})=>{
                           edges {
                             node {
                               childImageSharp{
-                                fixed (width:300) {
+                                fixed (width:250) {
                                   ...GatsbyImageSharpFixed
+                                }
+                                fluid{
+                                  ...GatsbyImageSharpFluid
                                 }
                               }
                             }
                           }
                       }
                   }`} 
-                  render={data=>(<Img fixed={data.allFile.edges[0].node.childImageSharp.fixed}/>)}/>          
+                  render={data=>(<Img className= "name" fluid={data.allFile.edges[0].node.childImageSharp.fluid}/>)}/>          
                 </Col>
-                <Col >
+                <Col>
                   <div>
                     <h1 className="name">Stewart MacDonald, E.I.T.</h1>
                     <div class="academics"> 
@@ -41,7 +44,7 @@ const About = ({})=>{
                 </Col>
             </Row>
             <hr></hr>
-            <Row xs="3">
+            <Row>
               <Col className="">
                 Skills:
                 <ul>

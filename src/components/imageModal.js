@@ -10,9 +10,13 @@ const ImageModal = ({images}) =>{
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
     
-    const toggle = (index)=>{goToIndex(index);setModal(!modal);};
+    const toggle = (index)=>{
+        setAnimating(false);
+        goToIndex(index);
+        setModal(!modal);};
 
     const next = () => {
+        console.log(animating)
         if (animating) return;
         const nextIndex = activeIndex === images.length - 1 ? 0 : activeIndex + 1;
         setActiveIndex(nextIndex);
@@ -46,7 +50,7 @@ const ImageModal = ({images}) =>{
             <>
             <hr/>
             <Container>
-                <Row xs="4">
+                <Row>
                     {getThumbnails(images,toggle)}
                 </Row>
                    
@@ -80,8 +84,9 @@ function getThumbnails(images,modalToggleFunction) {
     const imageArray = [];
     images.forEach((image,index) => {
       imageArray.push(
+          
       <Col><div className="imageContainer" onClick={()=>modalToggleFunction(index)}>
-        <Img fixed={image.file.childImageSharp.fixed} alt={image.file.tag}/></div>
+        <Img fluid={image.file.childImageSharp.fluid} alt={image.file.tag}/></div>
       </Col>)
     });
     return imageArray

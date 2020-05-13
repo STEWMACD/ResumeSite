@@ -30,7 +30,7 @@ const Projects = ({id}) => {
                         fluid(pngQuality: 100, toFormat: PNG) {
                           ...GatsbyImageSharpFluid
                         }
-                        fixed (width: 200, height: 150) {
+                        fixed (width: 100, height: 75) {
                           ...GatsbyImageSharpFixed
                         }
                       }
