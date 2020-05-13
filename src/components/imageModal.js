@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import {Modal, Container,Row,Col, ModalBody, ModalHeader} from "reactstrap"
+import {Modal, Container,Row,Col, ModalBody, ModalHeader, CarouselItem, Carousel, CarouselControl} from "reactstrap"
 import Img from "gatsby-image"
 import "../styles/images.css"
 import Video from "../components/video"
@@ -7,8 +7,38 @@ import Video from "../components/video"
 const ImageModal = ({images}) =>{
 
     const [modal, setModal] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [animating, setAnimating] = useState(false);
+    
+    const toggle = (index)=>{goToIndex(index);setModal(!modal);};
 
-    const toggle = () => setModal(!modal);
+    const next = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === images.length - 1 ? 0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+    }
+
+    const previous = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === 0 ? images.length - 1 : activeIndex - 1;
+        setActiveIndex(nextIndex);
+    }
+
+    const goToIndex = (newIndex) => {
+        if (animating&&modal) return;
+        setActiveIndex(newIndex);
+    }
+
+    const slides = images.map((image =>{
+        return (
+            <CarouselItem
+                onExiting={() => setAnimating(true)}
+                onExited={() => setAnimating(false)}
+            key={image.tag}>
+            {getModalContent(image)}
+        </CarouselItem>
+        )
+    }))
 
     //Only return images if there is atleast one image
     if (images.length > 0){
@@ -16,47 +46,47 @@ const ImageModal = ({images}) =>{
             <>
             <hr/>
             <Container>
-                    <Row xs="4">
-                        {getImages(images)}
-                    </Row>    
+                <Row xs="4">
+                    {getThumbnails(images,toggle)}
+                </Row>
+                   
             </Container>
+            <Modal isOpen={modal} toggle={toggle}>
+                    <ModalBody>
+                        <div className="text-center">
+                            <Carousel
+                            activeIndex={activeIndex}
+                            next={next}
+                            previous={previous}>
+                                {slides}
+                            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+                            <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+                            </Carousel>
+                            
+
+                        </div>
+                    </ModalBody>
+                </Modal> 
             </>
         );
     }
     return (<></>);
     
 }
+
 export default ImageModal
 
-function getImages(images) {
+function getThumbnails(images,modalToggleFunction) {
     const imageArray = [];
-    images.forEach(element => {
-      imageArray.push(<ImageSub image={element}/>)
+    images.forEach((image,index) => {
+      imageArray.push(
+      <Col><div className="imageContainer" onClick={()=>modalToggleFunction(index)}>
+        <Img fixed={image.file.childImageSharp.fixed} alt={image.file.tag}/></div>
+      </Col>)
     });
     return imageArray
-  }
+}
 
-  const ImageSub = ({image})=>{
-      const [modal, setModal] = useState(false);
-      const toggle = () =>setModal(!modal);
-    return(
-        <>
-            <Col><div className="imageContainer"onClick={toggle}>
-                <Img fixed={image.file.childImageSharp.fixed} alt={image.tag}/></div>
-            </Col>
-            
-            <Modal isOpen={modal} toggle={toggle}>
-                <ModalBody>
-                    <div className="text-center">
-                        {getModalContent(image)}
-                        
-                    </div>
-                </ModalBody>
-            </Modal>
-        
-        </>
-
-  );}
 
 function getModalContent(image){
     const returnArray = [];
@@ -64,8 +94,17 @@ function getModalContent(image){
         returnArray.push(<Video videoSrcURL = {image.videoURL}/>) 
     }else{
         returnArray.push(<Img fluid={image.file.childImageSharp.fluid} alt={image.tag}/>)
-
     }
     return returnArray;
 
 }
+
+function getCarouselItems(images){
+    const returnArray = [];
+    images.forEach((image,index)=>{
+        returnArray.push(
+        
+            )
+    })
+}
+

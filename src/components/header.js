@@ -9,9 +9,12 @@ import {
   Nav,
   NavItem,
   NavLink,
-  NavbarText
+  NavbarText,
+  Button
 } from 'reactstrap';
-
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import {Link} from 'gatsby'
+;
 const Header = ({ siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,19 +23,19 @@ const Header = ({ siteTitle }) => {
   
   <>
      <div>
-      <Navbar color="light" fixed="top" light expand="md">
+      <Navbar id="myNavBar" color="light" fixed="top" light expand="md">
         <NavbarBrand href="/">Stewart MacDonald</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/projects/">Projects</NavLink>
+            <Link to="/#projects" ><NavLink >Projects</NavLink></Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/workexperience/">Work Experience</NavLink>
+              <Link to="/#workexp" ><NavLink >Work Experience</NavLink></Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/">About</NavLink>
+            <Link to="/#about"><NavLink >About</NavLink></Link>
             </NavItem>
           </Nav>
           <NavbarText>

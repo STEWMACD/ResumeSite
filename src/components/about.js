@@ -4,40 +4,38 @@ import {StaticQuery, graphql} from 'gatsby'
 import Img from "gatsby-image"
 import "../styles/abouts.css"
 
-const About = ({data})=>{
+const About = ({})=>{
 
-    console.log(data)
     return(
-      <StaticQuery
-      query= {graphql`
-      query{
-        allFile(filter: {base: {eq: "headshot.png"}}) {
-            edges {
-              node {
-                childImageSharp{
-                  fixed (width:300) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-              }
-            }
-        }
-    }`} 
-    render={data=>(
-        <Container fluid="sm">
-            <Row xs="2">
-                <Col xs="auto" offset="1">
-                <Img fixed={data.allFile.edges[0].node.childImageSharp.fixed}></Img>
+      <Container>
+            <Row>
+                <Col xs="auto">
+                    <StaticQuery
+                    query= {graphql`
+                    query{
+                      allFile(filter: {base: {eq: "headshot.png"}}) {
+                          edges {
+                            node {
+                              childImageSharp{
+                                fixed (width:300) {
+                                  ...GatsbyImageSharpFixed
+                                }
+                              }
+                            }
+                          }
+                      }
+                  }`} 
+                  render={data=>(<Img fixed={data.allFile.edges[0].node.childImageSharp.fixed}/>)}/>          
                 </Col>
                 <Col >
                   <div>
-                    <h2 class="name">Stewart MacDonald, E.I.T.</h2>
+                    <h1 className="name">Stewart MacDonald, E.I.T.</h1>
                     <div class="academics"> 
                       B.A.Sc Mechanical Engineering - Distinction <br/>2019 - UBC Okanagan
                       <hr/>
                     </div> 
                     <div class="summary">Junior Mechanical Engineer with professional experience in mechanical design. 
-                      Strong analytical skills as shown by strong academics, quick learner when it comes to software and technology. Hard worker willing to put the hours in to get the job done right.</div>
+                      Strong analytical skills as shown by excellent academics, quick learner when it comes to software and technology. Hard worker willing to put the hours in to get the job done right.</div>
                   </div>
                   
                 </Col>
@@ -71,10 +69,10 @@ const About = ({data})=>{
                   <li>Advanced Controls Courses</li>
                 </ul>
               </Col>
-            </Row>
+            </Row><hr/>
         </Container>
-        )}
-        />
+        
+        
     );
 }
 

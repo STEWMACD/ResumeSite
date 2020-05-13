@@ -12,6 +12,16 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "../bootstrap/css/bootstrap.css"
 
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]',{
+    easing: 'easeInOutCubic',
+    updateURL: true, // Update the URL on scroll
+    popstate: true,
+    header: '[id=myNavBar]'
+  })
+}
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -22,6 +32,8 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+    
 
   return (
     <>
