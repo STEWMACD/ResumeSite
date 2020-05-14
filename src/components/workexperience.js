@@ -1,8 +1,6 @@
-import React, { useState } from "react"
-import "../styles/projects.css"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import moment from "moment"
 
 const WorkExperience = ({id})=>{
 
@@ -16,7 +14,7 @@ const WorkExperience = ({id})=>{
         <StaticQuery
         query={graphql`
         query {
-            allWorkExperience {
+            allWorkExperience (sort: {fields: endDate, order: DESC}){
               edges {
                 node {
                   employer
@@ -35,18 +33,15 @@ const WorkExperience = ({id})=>{
 }
 
 const WorkExp= ({workExp}) =>{
-    // const [isOpen, setIsOpen] = useState(false);
-    // const toggle = () => {setIsOpen(!isOpen);
-    //     setStatus(isOpen ? "more...":"less...");}
-    // const [status, setStatus] = useState('more...')
     
     return(
         
     <div>
         <div className="title">{workExp.node.title}</div>
-        <div className="emphasis">{workExp.node.employer} <div className="float-right">{workExp.node.startDate} - {workExp.node.endDate}</div></div>
+        <div className="emphasis">{workExp.node.employer} <div className="float-right">{moment(workExp.node.startDate).format("MMMM YYYY")} - {moment(workExp.node.endDate).format("MMMM YYYY")}</div></div>
         
-        <div>{workExp.node.description}</div>
+        <div className="description">{workExp.node.description}</div>
+        
         <div>
             <ul>
             {listPoints(workExp.node.keyPoints)}

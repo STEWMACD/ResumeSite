@@ -1,8 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap';
-import {StaticQuery, graphql} from 'gatsby'
+import {StaticQuery, graphql, Link} from 'gatsby'
 import Img from "gatsby-image"
-import "../styles/abouts.css"
 
 const About = ({})=>{
 
@@ -35,11 +34,18 @@ const About = ({})=>{
                     <h1 className="name">Stewart MacDonald, E.I.T.</h1>
                     <div class="academics"> 
                       B.A.Sc Mechanical Engineering - Distinction <br/>2019 - UBC Okanagan
-                      <hr/>
+                      
                     </div> 
+                    <hr/>
                     <div class="summary">Junior Mechanical Engineer with professional experience in mechanical design. 
+                    
                       Strong analytical skills as shown by excellent academics, quick learner when it comes to software and technology. Hard worker willing to put the hours in to get the job done right.</div>
-                  </div>
+                    
+                    </div><hr/>
+                    <div class="contact">
+                      
+                      604-798-5541 | <a href="mailto:stewart.d.macdonald@gmail.com">stewart.d.macdonald@gmail.com</a>
+                    </div>
                   
                 </Col>
             </Row>
@@ -51,7 +57,7 @@ const About = ({})=>{
                   <li>Computer Programming</li>
                   <li>CAD</li>
                   <li>Mechanical Design</li>
-                  <li>Mechatronics</li>
+                  <li>Microsoft Office</li>
                 </ul>
               </Col>
               <Col className="">

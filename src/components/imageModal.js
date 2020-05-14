@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import {Modal, Container,Row,Col, ModalBody, ModalHeader, CarouselItem, Carousel, CarouselControl} from "reactstrap"
 import Img from "gatsby-image"
-import "../styles/images.css"
 import Video from "../components/video"
 
 const ImageModal = ({images}) =>{
@@ -57,7 +56,9 @@ const ImageModal = ({images}) =>{
             </Container>
             <Modal isOpen={modal} toggle={toggle}>
                     <ModalBody>
-                        <div className="text-center">
+                    <div className="text-center">
+                        {(images.length>1)?(
+                            
                             <Carousel
                             activeIndex={activeIndex}
                             next={next}
@@ -68,6 +69,9 @@ const ImageModal = ({images}) =>{
                             </Carousel>
                             
 
+                        
+                        ):getModalContent(images[0])
+                        }
                         </div>
                     </ModalBody>
                 </Modal> 

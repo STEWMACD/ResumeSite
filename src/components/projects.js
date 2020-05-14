@@ -1,9 +1,7 @@
 import React, { useState } from "react"
-import "../styles/projects.css"
 import { Collapse } from 'reactstrap'
 import ImageModal from "./imageModal.js"
 import moment from "moment"
-import SEO from "./seo"
 import {graphql, StaticQuery, Link} from 'gatsby'
 
 const Projects = ({id}) => {
@@ -99,12 +97,12 @@ const Project = ({project}) =>{
                 <div className="CollapseContainer bg-light border">
                     <div>
                         {project.node.longDescription}
-                        
-                    <ImageModal images={project.node.images}/>
+                        {getLinks(project.node.links)}
+                      <ImageModal images={project.node.images}/>
                     </div>
              
                     <div>
-                      {getLinks(project.node.links)}
+                      
                     </div>
             </div>
             

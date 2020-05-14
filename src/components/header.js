@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import "../styles/header.css"
 import {
   Collapse,
   Navbar,
@@ -12,7 +11,6 @@ import {
   NavbarText,
   Button
 } from 'reactstrap';
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 import {Link} from 'gatsby'
 ;
 const Header = ({ siteTitle }) => {
@@ -29,13 +27,13 @@ const Header = ({ siteTitle }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-            <Link to="/#projects" ><NavLink >Projects</NavLink></Link>
+              <Link to="/#about"><NavLink >About</NavLink></Link>
             </NavItem>
             <NavItem>
               <Link to="/#workexp" ><NavLink >Work Experience</NavLink></Link>
             </NavItem>
             <NavItem>
-            <Link to="/#about"><NavLink >About</NavLink></Link>
+              <Link to="/#projects" ><NavLink >Projects</NavLink></Link>
             </NavItem>
           </Nav>
           <NavbarText>

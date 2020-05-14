@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "../bootstrap/css/bootstrap.css"
+import "../styles/global.css"
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require

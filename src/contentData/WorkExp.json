@@ -3,8 +3,8 @@
     "label" : "WorkExperience",
     "employer" : "Propell Oilfield Equipment",
     "title": "Engineering Product Specialist",
-    "startDate": "June 2019",
-    "endDate" : "March 2020",
+    "startDate": "2019-06-01",
+    "endDate" : "2020-03-01",
     "description": "Worked as a mechanical engineer focusing on hydraulic fracturing machines, and implementing SolidWorks PDM for company use",
     "keyPoints":
     [
@@ -17,23 +17,24 @@
     "label" : "WorkExperience",
     "employer" : "Propell Oilfield Equipment",
     "title": "Engineering Summer Student",
-    "startDate": "May 2018",
-    "endDate" : "August 2018",
-    "description": "Worked as a mechanical engineer focusing on hydraulic fracturing machines, and implementing SolidWorks PDM for company use",
+    "startDate": "2018-05-01",
+    "endDate" : "2018-08-01",
+    "description": "Worked under full-time engineers performing changes to current designs and creating new designs",
     "keyPoints":
     [
         "Supported production teams in large output manufacturing and assembly processes",
         "Implemented changes compliant with Engineering Change Request procedures",
-        "Determined root cause of issues via system and design analysis"
+        "Determined root cause of issues via system and design analysis",
+        "Designed new components using SolidWorks"
     ]
 },
 {
     "label" : "WorkExperience",
     "employer" : "Village of Harrison Hot Springs",
     "title": "Engineering and Utilities Summer Student",
-    "startDate": "June 2016",
-    "endDate" : "August 2016",
-    "description": "Worked for the village completing tasks primarily related to water usage and billing.",
+    "startDate": "2016-06-01",
+    "endDate" : "2016-08-01",
+    "description": "Worked for the village completing tasks primarily related to water usage and billing",
     "keyPoints":
     [
         "Compiled data on water usage, compliance and billing requirements",
@@ -45,15 +46,30 @@
     "label" : "WorkExperience",
     "employer" : "Fairfield Island Plumbing and Heating",
     "title": "Plumbing Labourer (Summer Position)",
-    "startDate": "June 2013",
-    "endDate" : "June 2016",
+    "startDate": "2013-06-01",
+    "endDate" : "2016-06-01",
     "description": "Performed manual labour tasks to facilitate installation of plumbing products",
     "keyPoints":
     [
         "Performed labour work as required to install plumbing hardware",
-        "Participated in construction of residential and commerical projects",
+        "Participated in construction of residential and commercial projects",
         "Installed copper, ABS, PVC, Pex and cast-iron piping",
         "Operated gas and electric powered tools"
+    ]
+},
+{
+    "label" : "WorkExperience",
+    "employer" : "UBCO Motorsports",
+    "title": "Team Captain",
+    "startDate": "2017-09-01",
+    "endDate" : "2019-06-01",
+    "description": "Lead student team in design and construction of small open-wheeled racing car",
+    "keyPoints":
+    [
+        "Developed standard operating procedures for team to use in design",
+        "Standardized part numbering and modelling procedures",
+        "Liaised with sponsors, faculty and other stakeholders to represent the team",
+        "Secured funding and reputation for the team"
     ]
 }
 ]
