@@ -4,7 +4,7 @@ import { Collapse } from 'reactstrap'
 import ImageModal from "./imageModal.js"
 import moment from "moment"
 import SEO from "./seo"
-import {graphql, StaticQuery} from 'gatsby'
+import {graphql, StaticQuery, Link} from 'gatsby'
 
 const Projects = ({id}) => {
     
@@ -15,7 +15,7 @@ const Projects = ({id}) => {
         <h1>Projects</h1>
         <StaticQuery
         query = {graphql`query {
-            allProject {
+          allProject(sort: {fields: date, order: DESC}) {
               edges {
                 node {
                   longDescription
@@ -24,15 +24,20 @@ const Projects = ({id}) => {
                   title
                   inspiration
                   date
+                  links {
+                    path
+                    text
+                  }
                   images {
                     file {
                       childImageSharp {
                         fluid(pngQuality: 100, toFormat: PNG) {
                           ...GatsbyImageSharpFluid
                         }
-                        fixed (width: 100, height: 75) {
+                        fixed (width: 120 height:80) {
                           ...GatsbyImageSharpFixed
                         }
+                      
                       }
                     }
                     tag
@@ -60,6 +65,20 @@ const Projects = ({id}) => {
     return projectsArray
   }
   
+  function getLinks(links){
+    if(links != null && links.length > 0){
+      const returnArray =[];
+      returnArray.push(<hr/> )
+      returnArray.push('Link(s): ')
+      links.forEach((link,index)=>{
+        returnArray.push(<Link to={link.path}>{link.text}</Link>)
+        if (index != links.length-1)
+          returnArray.push(', ')
+      })
+      return returnArray;
+    }
+    return (<></>)
+  }
 
 const Project = ({project}) =>{
     const [isOpen, setIsOpen] = useState(false);
@@ -83,8 +102,9 @@ const Project = ({project}) =>{
                         
                     <ImageModal images={project.node.images}/>
                     </div>
-            
+             
                     <div>
+                      {getLinks(project.node.links)}
                     </div>
             </div>
             

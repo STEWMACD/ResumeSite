@@ -50,7 +50,7 @@ const ImageModal = ({images}) =>{
             <>
             <hr/>
             <Container>
-                <Row>
+                <Row xs= "2" md="4" lg = "6" noGutters>
                     {getThumbnails(images,toggle)}
                 </Row>
                    
@@ -85,8 +85,8 @@ function getThumbnails(images,modalToggleFunction) {
     images.forEach((image,index) => {
       imageArray.push(
           
-      <Col><div className="imageContainer" onClick={()=>modalToggleFunction(index)}>
-        <Img fluid={image.file.childImageSharp.fluid} alt={image.file.tag}/></div>
+      <Col><div className="imageContainer overlay-effect" onClick={()=>modalToggleFunction(index)}>
+        <Img fixed={image.file.childImageSharp.fixed} alt={image.file.tag}/></div>
       </Col>)
     });
     return imageArray

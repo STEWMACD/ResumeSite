@@ -44,7 +44,7 @@ const About = ({})=>{
                 </Col>
             </Row>
             <hr></hr>
-            <Row>
+            <Row xs="1" sm="1" md="3">
               <Col className="">
                 Skills:
                 <ul>
