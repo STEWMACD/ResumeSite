@@ -58,6 +58,7 @@ const About = ({})=>{
                   <li>CAD</li>
                   <li>Mechanical Design</li>
                   <li>Microsoft Office</li>
+                  <li>Project Management</li>
                 </ul>
               </Col>
               <Col className="">
@@ -67,6 +68,7 @@ const About = ({})=>{
                   <li>SQL</li>
                   <li>Python</li>
                   <li>MATLAB</li>
+                  <li>Java</li>
                 </ul>
               </Col>
               <Col className="">
@@ -76,6 +78,7 @@ const About = ({})=>{
                   <li>Certified PDM User</li>
                   <li>Biomedical Engineering Course</li>
                   <li>Advanced Controls Courses</li>
+                  <li>Certified in SAE GD&T</li>
                 </ul>
               </Col>
             </Row><hr/>

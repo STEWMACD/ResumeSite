@@ -38,7 +38,7 @@ const WorkExp= ({workExp}) =>{
         
     <div>
         <div className="title">{workExp.node.title}</div>
-        <div className="emphasis">{workExp.node.employer} <div className="float-right">{moment(workExp.node.startDate).format("MMMM YYYY")} - {moment(workExp.node.endDate).format("MMMM YYYY")}</div></div>
+        <div className="emphasis">{workExp.node.employer} <div className="float-right">{moment(workExp.node.startDate).format("MMMM YYYY")} - {endDate(workExp.node.endDate)}</div></div>
         
         <div className="description">{workExp.node.description}</div>
         
@@ -48,8 +48,17 @@ const WorkExp= ({workExp}) =>{
             </ul>
         </div>
     </div>
-);}
+);
 
+
+}
+
+function  endDate(date){
+  console.log(date);
+  if (date === "Present")
+  return "Present"
+  else return moment(date).format("MMMM YYYY")
+}
 export default WorkExperience
 
 function listPoints(points) {

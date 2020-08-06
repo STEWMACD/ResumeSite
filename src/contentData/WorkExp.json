@@ -1,4 +1,19 @@
 [
+    {
+        "label" : "WorkExperience",
+        "employer" : "Vanrx Pharmasystems",
+        "title": "Mechanical Engineer",
+        "startDate": "2020-06-01",
+        "endDate" : "Present",
+        "description": "Worked as a mechanical designer with a focus on change tooling.",
+        "keyPoints":
+        [
+            "Created and evaluated mechanical designs in SolidWorks",
+            "Supported the integration of new filling formats for Vanrx Aseptic Filling Cells",
+            "Updated testing bench, including work in mechanical, electrical and controls domains",
+            "Aided in the development of specification documentation for machine integration"
+        ]
+    },
 {
     "label" : "WorkExperience",
     "employer" : "Propell Oilfield Equipment",
