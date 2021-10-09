@@ -19,7 +19,7 @@ if (typeof window !== "undefined") {
     easing: 'easeInOutCubic',
     updateURL: true, // Update the URL on scroll
     popstate: true,
-    header: '[id=myNavBar]'
+    header: '[id=about]'
   })
 }
 

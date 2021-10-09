@@ -75,10 +75,10 @@ const About = ({})=>{
                 Certifications/Courses:
                 <ul>
                   <li>Certified Solidworks Professional</li>
-                  <li>Certified PDM User</li>
-                  <li>Biomedical Engineering Course</li>
-                  <li>Advanced Controls Courses</li>
+                  <li>Certified PDM Administration</li>
                   <li>Certified in SAE GD&T</li>
+                  <li>Certified PDM User</li>
+                  <li>AiM Plastics Bootcamp</li>
                 </ul>
               </Col>
             </Row><hr/>

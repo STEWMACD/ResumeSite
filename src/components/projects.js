@@ -18,6 +18,7 @@ const Projects = ({id}) => {
                 node {
                   longDescription
                   shortDescription
+                  active
                   skills
                   title
                   inspiration
@@ -57,8 +58,12 @@ const Projects = ({id}) => {
   function getProjects(data) {
     const projectsArray = [];
     data.allProject.edges.forEach(element => {
-      projectsArray.push(<Project project = {element}/>)
-      projectsArray.push(<hr/>)
+      console.log(element)
+      if (element.node.active === "yes"){
+        projectsArray.push(<Project project = {element}/>)
+        projectsArray.push(<hr/>)
+      }
+        
     });
     return projectsArray
   }

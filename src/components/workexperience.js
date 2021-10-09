@@ -54,7 +54,6 @@ const WorkExp= ({workExp}) =>{
 }
 
 function  endDate(date){
-  console.log(date);
   if (date === "Present")
   return "Present"
   else return moment(date).format("MMMM YYYY")
