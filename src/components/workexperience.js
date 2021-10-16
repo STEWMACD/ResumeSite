@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import Fade from 'react-reveal/Fade';
 import { graphql, StaticQuery } from "gatsby"
 import moment from "moment"
 
@@ -9,25 +10,33 @@ const WorkExperience = ({id})=>{
 
     return(
         <>
-        
-        <h1 id={id}>Work Experience</h1>
-        <StaticQuery
-        query={graphql`
-        query {
-            allWorkExperience (sort: {fields: endDate, order: DESC}){
-              edges {
-                node {
-                  employer
-                  endDate
-                  keyPoints
-                  startDate
-                  title
-                  description
+        <Fade left>
+          <h1 id={id}>Work Experience</h1>
+          </Fade>
+          
+          <StaticQuery
+          query={graphql`
+          query {
+              allWorkExperience (sort: {fields: endDate, order: DESC}){
+                edges {
+                  node {
+                    employer
+                    endDate
+                    keyPoints
+                    startDate
+                    title
+                    description
+                  }
                 }
               }
-            }
-          }`}
-          render={data=>{return getWorkExperience(data)}}/>
+            }`}
+            
+            render={data=>(
+              <Fade left>
+              {getWorkExperience(data)}
+              </Fade>
+              )}/>
+          
         </>
     );
 }
@@ -36,7 +45,9 @@ const WorkExp= ({workExp}) =>{
     
     return(
         
+      
     <div>
+      
         <div className="title">{workExp.node.title}</div>
         <div className="emphasis">{workExp.node.employer} <div className="float-right">{moment(workExp.node.startDate).format("MMMM YYYY")} - {endDate(workExp.node.endDate)}</div></div>
         
@@ -48,6 +59,7 @@ const WorkExp= ({workExp}) =>{
             </ul>
         </div>
     </div>
+    
 );
 
 
