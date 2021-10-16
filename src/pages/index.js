@@ -14,7 +14,7 @@ import WorkExperience from "../components/workexperience"
 const IndexPage = () => (
   <Layout>
     <SEO title="About" />
-    <About id="about"></About>
+    <About id="abt"></About>
     <WorkExperience id="workexp"></WorkExperience>
     <Projects id="projects"></Projects>
   </Layout>

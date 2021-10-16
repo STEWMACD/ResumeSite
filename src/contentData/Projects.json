@@ -1,6 +1,37 @@
 [
     {
         "label": "Project",
+        "active": "yes",
+        "inspiration" : "Professional",
+        "title": "Test Bench",
+        "shortDescription": "Added value to the tooling test bench by adding access to a second robotic arm and integrated scale",
+        "longDescription": "Integrating the new hardware included changes to the hardware and software of the test bench. I re-wired low voltage control systems based off production drawings. Following the hardware upgrades I updated existing software designed to interface witha singular robot to communicate with a second robot and a scale. The scale had not previously been integrated into the software. Both robots and the scale were all integrated over TCP to a single HMI computer",
+        "date" : "2021-03-01",
+        "skills" : "VBA, Controls, Software, Robotics",
+        "images":
+        [
+        
+        ],
+        "links": []
+    },
+    {
+        "label": "Project",
+        "active": "yes",
+        "inspiration" : "Professional",
+        "title": "PDM Part Number Add-in",
+        "shortDescription": "Developed a customized add-in for PDM to handle part numbering",
+        "longDescription": "Utilized SolidWorks PDM integrated API to create an add in to intercept and add characters to the standard part numbering structure. This involved learning the API and how to test the add-in. This was especially difficult as PDM binds to Windows explorer, which needs ot be restarted to test different version of the add-in",
+        "date" : "2019-12-01",
+        "skills" : "PDM, programming, problem-solving",
+        "images":
+        [
+        
+        ],
+        "links": []
+    },
+    {
+        "label": "Project",
+        "active": "no",
         "inspiration" : "Personal",
         "title": "Robotic Arm",
         "shortDescription": "Designed and building 5 degree of freedom robotic arm",
@@ -17,10 +48,11 @@
     },
     {
         "label": "Project",
+        "active": "yes",
         "inspiration" : "Personal",
         "title": "Resume Website",
         "shortDescription": "Designed and developed resume website. Created in Gatsby",
-        "longDescription": "I was able to put my programming skills to use in developing this website. The site is constructed using GatsbyJs, a static site generator. This project gave me experience using backend systems such as ReactJS and Node. It also allowed me to flex creative muscles as I created a minimalist design to showcase my resume.",
+        "longDescription": "I was able to put my programming skills to use in developing this website. The site is constructed using GatsbyJS, React, and nodeJS. Using the static site generator, each work experience line item, and project line item are integrated into JSON files. Additionally the ",
         "links": [{"path":"https://github.com/STEWMACD/ResumeSite","text":"Github Repo"}],
         "date" : "2020-05-01",
         "skills": "Programming, design, web development, Javascript, HTML",
@@ -31,6 +63,7 @@
     },
     {
         "label": "Project",
+        "active": "yes",
         "inspiration" : "Academics",
         "title": "3D Printed Axial Flux Motor",
         "shortDescription": "Designed, manufactured and programmed a small axial flux motor",
@@ -47,6 +80,7 @@
     },
     {
         "label": "Project",
+        "active": "no",
         "inspiration" : "Personal",
         "title": "3D Printer - Creality Ender 3 ",
         "shortDescription": "Built and used Ender 3 model 3D printer",
@@ -60,6 +94,7 @@
     },
     {
         "label": "Project",
+        "active": "yes",
         "inspiration" : "Academic",
         "title": "Single Stage Reduction Gearbox",
         "shortDescription": "Designed transmission based upon material properties and dimensional requirements",

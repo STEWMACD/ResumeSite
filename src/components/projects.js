@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Collapse } from 'reactstrap'
 import ImageModal from "./imageModal.js"
+import Fade from 'react-reveal/Fade';
 import moment from "moment"
 import {graphql, StaticQuery, Link} from 'gatsby'
 
@@ -10,14 +11,17 @@ const Projects = ({id}) => {
     
     return(
     <div id={id}>
+      <Fade left>
         <h1>Projects</h1>
-        <StaticQuery
+      </Fade>
+      <StaticQuery
         query = {graphql`query {
           allProject(sort: {fields: date, order: DESC}) {
               edges {
                 node {
                   longDescription
                   shortDescription
+                  active
                   skills
                   title
                   inspiration
@@ -57,8 +61,11 @@ const Projects = ({id}) => {
   function getProjects(data) {
     const projectsArray = [];
     data.allProject.edges.forEach(element => {
-      projectsArray.push(<Project project = {element}/>)
-      projectsArray.push(<hr/>)
+      if (element.node.active === "yes"){
+        projectsArray.push(<Project project = {element}/>)
+        projectsArray.push(<hr/>)
+      }
+        
     });
     return projectsArray
   }
@@ -86,32 +93,33 @@ const Project = ({project}) =>{
     
     
     return(
-
-    <div>
-        <div className="title">{project.node.title}</div>
-        <div className="emphasis">{project.node.inspiration} | {moment(project.node.date).format("MMMM YYYY")}</div>
-        <div>{project.node.shortDescription}
-        </div>
-        <div>
-            <Collapse isOpen = {isOpen}>
-                <div className="CollapseContainer bg-light border">
-                    <div>
-                        {project.node.longDescription}
-                        {getLinks(project.node.links)}
-                      <ImageModal images={project.node.images}/>
-                    </div>
-             
-                    <div>
-                      
-                    </div>
-            </div>
-            
-            </Collapse>
-        </div>
-        <a className="moreLess" href="javascript:void(0);" onClick={toggle}>{status}</a>
-        
-        <div className="skills">Skills: {project.node.skills}</div>
-    </div>
+    <Fade left>
+      <div>
+          <div className="title">{project.node.title}</div>
+          <div className="emphasis">{project.node.inspiration} | {moment(project.node.date).format("MMMM YYYY")}</div>
+          <div>{project.node.shortDescription}
+          </div>
+          <div>
+              <Collapse isOpen = {isOpen}>
+                  <div className="CollapseContainer bg-light border">
+                      <div>
+                          {project.node.longDescription}
+                          {getLinks(project.node.links)}
+                        <ImageModal images={project.node.images}/>
+                      </div>
+              
+                      <div>
+                        
+                      </div>
+              </div>
+              
+              </Collapse>
+          </div>
+          <a className="moreLess" href="javascript:void(0);" onClick={toggle}>{status}</a>
+          
+          <div className="skills">Skills: {project.node.skills}</div>
+      </div>
+    </Fade>
 );}
 
 export default Projects

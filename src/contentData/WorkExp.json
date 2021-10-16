@@ -1,17 +1,33 @@
 [
     {
         "label" : "WorkExperience",
+        "employer" : "TyCrop Manufacturing",
+        "title": "Engineering Product Specialist",
+        "startDate": "2021-05-01",
+        "endDate" : "Present",
+        "description": "Developed designs for a variety of engineered products specializing in heavy mobilized equipment",
+        "keyPoints":
+        [
+            "Managed the engineering design of mobile heavy equipment",
+            "Implemented improvements in SolidWorks PDM including on-site replication, workflow optimization and data management",
+            "Designed sheetmetal parts, weldments, hydraulic circuits and other systems for heavy equipment"
+        ]
+    },
+    {
+        "label" : "WorkExperience",
         "employer" : "Vanrx Pharmasystems",
         "title": "Mechanical Engineer",
-        "startDate": "2020-06-01",
-        "endDate" : "Present",
-        "description": "Worked as a mechanical designer with a focus on change tooling.",
+        "startDate": "2020-05-01",
+        "endDate" : "2021-05-01",
+        "description": "Worked as a mechanical designer with a focus on change tooling design and test bench development.",
         "keyPoints":
         [
             "Created and evaluated mechanical designs in SolidWorks",
+            "Managed and developed improvements of SolidWorks PDM",
             "Supported the integration of new filling formats for Vanrx Aseptic Filling Cells",
-            "Updated testing bench, including work in mechanical, electrical and controls domains",
-            "Aided in the development of specification documentation for machine integration"
+            "Updated Tooling test bench. Customized VBA program to interface with extra robot and weigh scale via TCP connections. Improved GUI of testing software in order to facilitate use of extra devices",
+            "Developed specification documentation for machine consumables",
+            "Worked within strict SOPs for development of machines and parts in drug fill and finish operations"
         ]
     },
 {
@@ -27,7 +43,8 @@
         "Designed basic hydraulic systems and created layout drawings",
         "Develop calculation sheets for ASME B31.3 Process piping specifications",
         "Simulated critical designs used Solidworks FEA analysis, prepared reports documenting findings",
-        "Implemented SolidWorks PDM for company wide use, gaining experience in administration and user roles"
+        "Implemented SolidWorks PDM for company wide use, gaining experience in administration and user roles",
+        "Re-created drawing templates, organized SolidWorks file locations and optimized templates"
     ]
 },
 {
